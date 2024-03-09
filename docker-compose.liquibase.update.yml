@@ -1,8 +1,5 @@
 version: "1.0"
 
-volumes:
-  liquibase-data:
-
 services:
   liquibase:
     container_name: liquibase-container
@@ -20,7 +17,6 @@ services:
     volumes:
       - ./config/changelog.xml:/liquibase/changelog.xml
       - ./scripts:/liquibase/scripts
-      - liquibase-data:/liquibase
     networks:
       - liquibase-network
 
