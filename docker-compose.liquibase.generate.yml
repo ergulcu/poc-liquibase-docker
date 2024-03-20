@@ -6,7 +6,7 @@ services:
     image: liquibase/liquibase:4.25
     command: generate-changelog
     environment:
-      LIQUIBASE_COMMAND_CHANGELOG_FILE: /liquibase/generate/changelog-generate.sql
+      LIQUIBASE_COMMAND_CHANGELOG_FILE: /liquibase/generate/changelog-generate.xml
       LIQUIBASE_COMMAND_DRIVER: org.postgresql.Driver
       LIQUIBASE_COMMAND_URL: jdbc:postgresql://postgres-db:5432/postgres
       LIQUIBASE_COMMAND_USERNAME: postgres
